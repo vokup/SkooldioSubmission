@@ -21,7 +21,7 @@ export class Game {
             this.deckDomainService.shuffleDeck(deck);
     
             const bet = +(await this.gameIo.prompt('Please put your bet: '));
-            
+
             const yourCards = this.dealPairCard(deck);
             const dealerCards = this.dealPairCard(deck);
     
@@ -30,7 +30,7 @@ export class Game {
 
             const yourValue = this.calculateCardScoring(yourCards);
             const dealerValue = this.calculateCardScoring(dealerCards);
-
+            
             if (yourValue === dealerValue) {
                 this.gameIo.print('You tie!!!, received 0 chip');
             } else if (yourValue > dealerValue) {
@@ -49,14 +49,14 @@ export class Game {
         this.gameIo.print(`You got total ${this.totalChip} chip${this.totalChip > 1 ? 's' : ''}`)
     }
 
-    dealPairCard(deck: Deck): Array<Card> {
+    dealPairCard(deck: Deck): [ Card, Card ] {
         return [
             this.deckDomainService.dealFromDeck(deck), 
             this.deckDomainService.dealFromDeck(deck) 
         ];
     }
 
-    calculateCardScoring(cards: Array<Card>): number {
+    calculateCardScoring(cards: [ Card, Card ]): number {
         if (cards.length !== 2) {
             throw new Error('incorrect card length');
         }
