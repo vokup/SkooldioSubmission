@@ -1,0 +1,16 @@
+{
+  "name": "skooldiosubmission",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://gitlab.com/vokup/skooldiosubmission",
+  "author": "vokup <thanapawee.film@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node main.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.10",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.1.2"
+  }
+}
