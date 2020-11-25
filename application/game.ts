@@ -1,15 +1,13 @@
-import { stringify } from "querystring";
 import { Card } from "../domain/card";
 import { Deck } from "../domain/deck";
-import { DeckDomainService } from "../domainservice/deck";
-import { IRandomService } from "../domainservice/interfaces/random.service";
+import { IDeckDomainService } from "../domain/interfaces/deck.service";
 import { IGameIO } from "./interfaces/game.input";
 
 export class Game {
     private totalChip: number;
 
     constructor(
-        private readonly deckDomainService: DeckDomainService,
+        private readonly deckDomainService: IDeckDomainService,
         private readonly gameIo: IGameIO,
     ) {
         this.totalChip = 0;
@@ -45,7 +43,7 @@ export class Game {
             if (playMore.localeCompare('No') === 0) {
                 break;
             }
-            
+
             // spacing for next round
             console.log();
         }

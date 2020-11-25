@@ -1,8 +1,9 @@
 import { Card, CARD_FACES, CARD_NAMES } from "../domain/card";
 import { Deck } from "../domain/deck";
+import { IDeckDomainService } from "../domain/interfaces/deck.service";
 import { IRandomService } from "./interfaces/random.service";
 
-export class DeckDomainService {
+export class DeckDomainService implements IDeckDomainService {
     constructor(
         private readonly randomService: IRandomService,
     ) { }
