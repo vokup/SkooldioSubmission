@@ -45,6 +45,9 @@ export class Game {
             if (playMore.localeCompare('No') === 0) {
                 break;
             }
+            
+            // spacing for next round
+            console.log();
         }
         this.gameIo.print(`You got total ${this.totalChip} chip${this.totalChip > 1 ? 's' : ''}`)
     }
