@@ -1,7 +1,7 @@
 import { Card } from "../domain/card";
 import { Deck } from "../domain/deck";
 import { IDeckDomainService } from "../domain/interfaces/deck.service";
-import { IGameIO } from "./interfaces/game.input";
+import { IGameIO } from "./interfaces/game.io";
 
 export class Game {
     private totalChip: number;

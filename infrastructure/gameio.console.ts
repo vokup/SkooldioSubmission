@@ -1,4 +1,4 @@
-import { IGameIO } from "../application/interfaces/game.input";
+import { IGameIO } from "../application/interfaces/game.io";
 import readline from 'readline';
 
 function questionPromose(rl: readline.Interface, question: string): Promise<string> {
