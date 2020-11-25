@@ -45,7 +45,7 @@ export class Game {
             }
 
             // spacing for next round
-            console.log();
+            this.gameIo.print('');
         }
         this.gameIo.print(`You got total ${this.totalChip} chip${this.totalChip > 1 ? 's' : ''}`)
     }
